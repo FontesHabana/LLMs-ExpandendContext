@@ -1,10 +1,11 @@
 #from src.extractors import extractor
 from src.utils import prompts
 from src.models import qna_expander as qna
+from src.models import path_expander as path
 from src.utils import data_manager
 
 
-history = qna.qna_expander() 
+history = path.path_expander(0) 
 print(history)
 
 try:

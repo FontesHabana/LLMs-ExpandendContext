@@ -93,6 +93,31 @@ Output:
  Generate a single string containing the complete story, ignoring any formatting or titles
   """
 
+def fusion_history_prompt_string(answer, history):
+  "fusion a history"
+  return f"""
+You are a creative writing assistant specializing in seamless narrative integration. Your task is to merge a given original story with a set of supplementary story fragments into a cohesive and expanded single narrative.
+
+**Inputs:**
+1.  **Original Story:** The initial narrative text.
+2.  **Story Fragments:** A collection of text snippets designed to add to or elaborate on the original story.
+
+**Task:**
+1.  **Integrate** each of the provided story fragments into the original story.
+2.  Ensure that the integration is **chronologically consistent** within the overall narrative.
+3.  The transitions between the original text and the added fragments must be **smooth and natural**, such that the reader cannot discern where the original story ends and a fragment begins. This requires careful attention to pacing, tone, character voice, and narrative flow.
+4.  The resulting output should be a **single, unified, and longer story** where the added fragments feel organically woven into the existing narrative.
+
+**Input Story:**
+    {history}
+    
+
+**Story Fragments:**
+    {answer}
+
+Output:
+ Generate a single string containing the complete story, ignoring any formatting or titles
+  """
 #Path Expander Prompt
 
 def alone_moment_prompt(history_id):
