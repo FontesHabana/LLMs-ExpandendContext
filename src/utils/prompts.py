@@ -10,8 +10,8 @@ writing_assistant_character="Act as creative writing assistant specializing in m
     
 #Question Model Prompt
 # This prompt is used to generate a question based on the provided text. It instructs the model to create a question that is relevant to the content and context of the text.
-def generate_question_prompt(number=20, history_id=0):
-  "Genera el prompt para generar preguntas"
+def generate_question_prompt(number=20, story_id=0, story=""):
+  
   return f"""Analyze the following detective story text. Your task is to generate exactly {number} questions based solely on the information presented.
 
 These questions must adhere to the following strict rules:
@@ -24,8 +24,8 @@ Focus on identifying gaps in knowledge regarding evidence, timelines, alibis, mo
 
 
 Please list the 20 questions clearly.
-    Text: {data_manager.data_list[history_id]['narrative']}    
-    Suspect: {data_manager.data_list[history_id]['choices']}
+    Text: {story}    
+    Suspect: {data_manager.data_list[story_id]['choices']}
  
  the output format is a text with the structure :
  1 string/ 2 string/ ... / 20 string/...
@@ -33,8 +33,8 @@ Please list the 20 questions clearly.
 
 """
 
-def answer_question_prompt(questions, history_id=0):
-  """Genera las respuestas"""
+def answer_question_prompt(questions, story_id=0, story=""):
+ 
   return f"""```
 You are a creative writing assistant specializing in mystery and detective fiction. Your task is to expand upon an existing story by generating new sections that address specific unanswered questions, while carefully preserving the central mystery.
 
@@ -52,9 +52,9 @@ For **each** question in the provided list:
 5.  **CRITICAL CONSTRAINT:** None of the generated sections must **explicitly reveal the identity of the murderer** or make direct, unambiguous accusations. They can provide clues, deepen context, introduce complications, add atmospheric detail, or offer misdirection, but the ultimate 'whodunit' must remain unresolved within these additions. Focus on answering the *specific question asked* without solving the entire case. Ensure that for the {len(questions)} provided questions, there are exactly {len(questions)} corresponding generated text fragments in the output
 
 **Input Story:**
-    TextStory: {data_manager.data_list[history_id]['narrative']}
+    TextStory: {story}
 
-    Suspect: {data_manager.data_list[history_id]['choices']}
+    Suspect: {data_manager.data_list[story_id]['choices']}
 
     Question: {questions}
 
@@ -67,9 +67,9 @@ Answer:
 """
 
 
-#History fusion
-def fusion_history_prompt(answers, history_id=0):
-  "fusion a history"
+#story fusion
+def fusion_story_prompt(answers,story=""):
+ 
   return f"""
 You are a creative writing assistant specializing in seamless narrative integration. Your task is to merge a given original story with a set of supplementary story fragments into a cohesive and expanded single narrative.
 
@@ -84,7 +84,7 @@ You are a creative writing assistant specializing in seamless narrative integrat
 4.  The resulting output should be a **single, unified, and longer story** where the added fragments feel organically woven into the existing narrative.
 
 **Input Story:**
-    {data_manager.data_list[history_id]['narrative']}
+    {story}
 
 **Story Fragments:**
     {answers}
@@ -93,37 +93,9 @@ Output:
  Generate a single string containing the complete story, ignoring any formatting or titles
   """
 
-def fusion_history_prompt_string(answer, history):
-  "fusion a history"
-  return f"""
-You are a creative writing assistant specializing in seamless narrative integration. Your task is to merge a given original story with a set of supplementary story fragments into a cohesive and expanded single narrative.
 
-**Inputs:**
-1.  **Original Story:** The initial narrative text.
-2.  **Story Fragments:** A collection of text snippets designed to add to or elaborate on the original story.
-
-**Task:**
-1.  **Integrate** each of the provided story fragments into the original story.
-2.  Ensure that the integration is **chronologically consistent** within the overall narrative.
-3.  The transitions between the original text and the added fragments must be **smooth and natural**, such that the reader cannot discern where the original story ends and a fragment begins. This requires careful attention to pacing, tone, character voice, and narrative flow.
-4.  The resulting output should be a **single, unified, and longer story** where the added fragments feel organically woven into the existing narrative.
-
-**Input Story:**
-    {history}
-    
-
-**Story Fragments:**
-    {answer}
-
-Output:
- Generate a single string containing the complete story, ignoring any formatting or titles
-  """
-#Path Expander Prompt
-
-def alone_moment_prompt(history_id):
+def alone_moment_prompt(story_id=0, story=""):
   
-  
-  "Genera el prompt para determinar momentos solitarios"
   return f"""**Detailed Prompt: Extract and Format Suspect Solitary Moments**
 
     **Objective:**
@@ -155,13 +127,13 @@ def alone_moment_prompt(history_id):
         * If, after analyzing the text for all suspects, *no instances* of anyone being alone were found, output the specific string: `"No solitary moments identified for the listed suspects."`
 
     **Input Story Text:**
-        TextStory: {data_manager.data_list[history_id]['narrative']}
+        TextStory: {story}
 
-        Suspect: {data_manager.data_list[history_id]['choices']}
+        Suspect: {data_manager.data_list[story_id]['choices']}
     [Paste the full story text, statements, or relevant documents here]"""
     
-def complete_alonemoment_prompt(history_id, moments_list):
-  "Prompt para completar momentos en blanco"
+def complete_alonemoment_prompt(story_id, moments_list, story=""):
+  
   return f"""**Detailed Prompt: Creative Development of Solitary Moments (Police Novel Writer Persona)**
 
     **Your Role:**
@@ -192,14 +164,14 @@ def complete_alonemoment_prompt(history_id, moments_list):
         * If, after the initial analysis, you find no instances where any of the listed suspects were alone, return only the text: `No solitary moments identified for the listed suspects requiring narrative development.`
 
     **Story Text:**
-        TextStory: {data_manager.data_list[history_id]['narrative']}
+        TextStory: {story}
 
-        Suspect: {data_manager.data_list[history_id]['choices']}
+        Suspect: {data_manager.data_list[story_id]['choices']}
 
         List of moments:{moments_list} """
          
-def path_history_prompt(history_id, suspect_id):
-    "Genera el camino de los sospechozos"
+def path_story_prompt(story_id, suspect_id, story=""):
+  
     return f""" **Prompt: Generate Detailed Log of Character Actions and Conversations**
 
         **Objective:**
@@ -229,13 +201,13 @@ def path_history_prompt(history_id, suspect_id):
             * Provide enough detail from the text to make the entry informative.
 
         **Story Text:**
-         TextStory: {data_manager.data_list[history_id]['narrative']}
+         TextStory: {story}
 
-        Suspect: {data_manager.data_list[history_id]['choices'][suspect_id]}
+        Suspect: {data_manager.data_list[story_id]['choices'][suspect_id]}
        """
 
-def complete_path_prompt(history_id, suspect_id, path_list):
-    "Prompt para completar el camino"
+def complete_path_prompt(story_id, suspect_id, path_list, story=""):
+   
     return f""" Role: Act as a seasoned crime fiction writer, specializing in adding depth and tension to scenes.
 
             Task: I will provide you with two pieces of information:
@@ -250,11 +222,16 @@ def complete_path_prompt(history_id, suspect_id, path_list):
             Crucially, under no circumstances should you explicitly state or implicitly hint at the identity of the killer. The mystery must be preserved.
             Output: Provide only the newly written paragraph(s) that incorporate the character's actions, ready to be inserted into or appended to the original story snippet. Separate each paragraph with "/" return only the text of the new paragraph(s) without any additional commentary or formatting.
             **Story Text:**
-        TextStory: {data_manager.data_list[history_id]['narrative']}
+        TextStory: {story}
 
-        Suspect: {data_manager.data_list[history_id]['choices']}
+        Suspect: {data_manager.data_list[story_id]['choices'][suspect_id]}
 
         List of moments:{path_list}
             
             """
-                
+
+#Solution Prompt
+def solution_prompt(story_id, story):
+    
+    return f"""{story} {data_manager.data_list[story_id]["question"]} {data_manager.data_list[story_id]["choices"]} Return  only the number of the correct answer index. Ignore any explanation or additional text"""
+    
