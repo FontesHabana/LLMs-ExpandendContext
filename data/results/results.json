@@ -1,0 +1,580 @@
+{
+    "model_answer": {
+        "story_001": {
+            "answer": "0",
+            "original_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_002": {
+            "answer": "1",
+            "original_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_003": {
+            "answer": "0",
+            "original_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_004": {
+            "answer": "1",
+            "original_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_005": {
+            "answer": "0",
+            "original_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_006": {
+            "answer": "1",
+            "original_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_007": {
+            "answer": "0",
+            "original_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_008": {
+            "answer": "1",
+            "original_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_009": {
+            "answer": "0",
+            "original_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_010": {
+            "answer": "1",
+            "original_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_011": {
+            "answer": "0",
+            "original_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_012": {
+            "answer": "1",
+            "original_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_013": {
+            "answer": "0",
+            "original_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_014": {
+            "answer": "1",
+            "original_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_015": {
+            "answer": "0",
+            "original_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_016": {
+            "answer": "1",
+            "original_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_017": {
+            "answer": "0",
+            "original_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_018": {
+            "answer": "1",
+            "original_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_019": {
+            "answer": "0",
+            "original_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_020": {
+            "answer": "1",
+            "original_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_021": {
+            "answer": "0",
+            "original_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_022": {
+            "answer": "1",
+            "original_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_023": {
+            "answer": "0",
+            "original_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_024": {
+            "answer": "1",
+            "original_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_025": {
+            "answer": "0",
+            "original_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_026": {
+            "answer": "1",
+            "original_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_027": {
+            "answer": "0",
+            "original_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_028": {
+            "answer": "1",
+            "original_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_029": {
+            "answer": "0",
+            "original_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_030": {
+            "answer": "1",
+            "original_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_031": {
+            "answer": "0",
+            "original_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_032": {
+            "answer": "1",
+            "original_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_033": {
+            "answer": "0",
+            "original_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_034": {
+            "answer": "1",
+            "original_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_035": {
+            "answer": "0",
+            "original_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_036": {
+            "answer": "1",
+            "original_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_037": {
+            "answer": "0",
+            "original_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_038": {
+            "answer": "1",
+            "original_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_039": {
+            "answer": "0",
+            "original_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_040": {
+            "answer": "1",
+            "original_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_041": {
+            "answer": "0",
+            "original_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_042": {
+            "answer": "1",
+            "original_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_043": {
+            "answer": "0",
+            "original_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_044": {
+            "answer": "1",
+            "original_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_045": {
+            "answer": "0",
+            "original_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_046": {
+            "answer": "1",
+            "original_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_047": {
+            "answer": "0",
+            "original_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_048": {
+            "answer": "1",
+            "original_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_049": {
+            "answer": "0",
+            "original_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "0",
+                "DeepSeek_answer": null
+            }
+        },
+        "story_050": {
+            "answer": "1",
+            "original_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            },
+            "expanded_story": {
+                "llama_70B_answer": "1",
+                "DeepSeek_answer": null
+            }
+        }
+    },
+    "metrics": {
+        "correct_answer": {
+            "original_story": {
+                "llama_70B": 31,
+                "DeepSeek": null
+            },
+            "expanded_story": {
+                "llama_70B": 37,
+                "DeepSeek": null
+            }
+        },
+        "percent_correct_answer": {
+            "original_story": {
+                "llama_70B": 62.0,
+                "DeepSeek": null
+            },
+            "expanded_story": {
+                "llama_70B": 74.0,
+                "DeepSeek": null
+            }
+        },
+        "match_answer": 34,
+        "percent_match_answer": 68.0,
+        "answers_better_than_original": 6,
+        "answers_worse_than_original": 0
+    }
+}
