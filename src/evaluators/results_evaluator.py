@@ -21,16 +21,11 @@ def results_evaluation():
     results["metrics"]["percent_match_answer"]=percent(results, match)
     
     
-    if(correct_expanded-correct_original>0):
-        results["metrics"]["answers_better_than_original"]=correct_expanded-correct_original
-    else:
-         results["metrics"]["answers_better_than_original"]=0
     
+    results["metrics"]["answers_better_than_original"]=answer_better(results, "original_story", "expanded_story")
+   
     
-    if(correct_original-correct_expanded>0):
-        results["metrics"]["answers_worse_than_original"]=correct_expanded-correct_original
-    else:
-         results["metrics"]["answers_worse_than_original"]=0
+    results["metrics"]["answers_worse_than_original"]=answer_better(results,"expanded_story", "original_story")
     
     
                 
@@ -54,5 +49,12 @@ def match_answer(results):
     count=0
     for i in range(len(results["model_answer"])):
         if(results["model_answer"][f"story_{str(i+1).zfill(3)}"]["original_story"]["llama_70B_answer"]==results["model_answer"][f"story_{str(i+1).zfill(3)}"]["expanded_story"]["llama_70B_answer"]):
+            count+=1
+    return count
+
+def answer_better(results, story_1, story_2):
+    count=0
+    for i in range(len(results["model_answer"])):
+        if((results["model_answer"][f"story_{str(i+1).zfill(3)}"]["answer"]!=results["model_answer"][f"story_{str(i+1).zfill(3)}"][story_1]["llama_70B_answer"]) and(results["model_answer"][f"story_{str(i+1).zfill(3)}"]["answer"]==results["model_answer"][f"story_{str(i+1).zfill(3)}"][story_2]["llama_70B_answer"]) ):
             count+=1
     return count

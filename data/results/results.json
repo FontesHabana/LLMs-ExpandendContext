@@ -574,7 +574,8 @@
         },
         "match_answer": 34,
         "percent_match_answer": 68.0,
-        "answers_better_than_original": 6,
-        "answers_worse_than_original": 0
+        "answers_better_than_original": 11,
+        "answers_worse_than_original": 5,
+        "difference_better_worse":6
     }
 }
