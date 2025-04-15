@@ -8,7 +8,9 @@ from src.utils import data_manager
 from src.runners import story_maker as sm
 from src.utils import json_generator as jg
 from src.evaluators import evaluator, results_evaluator
+import matplotlib.pyplot as plt
+import matplotlib
 
 
-results_evaluator.results_evaluation()
+#results_evaluator.results_evaluation()
 #evaluator.evaluator()
